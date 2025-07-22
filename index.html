@@ -11,6 +11,11 @@
     <div id="app">
         <h1>{{ heading }}</h1>
         <p>{{ introText }}</p>
+
+        <h2>Contact Information</h2>
+        <p>Email: <a :href="'mailto:' + email">{{ email }}</a></p>
+        <p v-for="phoneNumber in phoneNumbers">Phone: {{ phoneNumber }}</p>
+        <p>Address: {{ address }}</p>
     </div>
 
     <script>
@@ -19,7 +24,9 @@
                 return {
                     heading: 'Maleesha Shashini',
                     introText: 'Hello there! I\'m Maleesha Shashini, a dedicated student at the University of Colombo (UCSC) with a keen interest in Information Technology and Software Engineering. I\'m also currently learning at OUSL and am actively seeking intern or new job opportunities to apply my skills.',
-                    
+                    email: 'maleeshashashini70@gmail.com',
+                    phoneNumbers: ['076-66-36-478', '011-22-40-195'], // Now an array for multiple numbers
+                    address: '184/A, Bollatha, Ganemulla'
                 }
             }
         });
