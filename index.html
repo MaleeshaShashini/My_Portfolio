@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maleeesha Shashini</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    </head>
+</head>
+
 <body>
-    
-    </body>
+    <div id="app">
+        <h1>{{ heading }}</h1>
+        <p>{{ introText }}</p>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    heading: 'Maleesha Shashini',
+                    introText: 'Hello there! I\'m Maleesha Shashini, a dedicated student at the University of Colombo (UCSC) with a keen interest in Information Technology and Software Engineering. I\'m also currently learning at OUSL and am actively seeking intern or new job opportunities to apply my skills.',
+                    
+                }
+            }
+        });
+
+        app.mount('#app');
+    </script>
+
+</body>
 </html>
